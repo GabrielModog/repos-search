@@ -7,11 +7,13 @@ export default function Home() {
   return (
     <AppShell header={{ height: 60 }} padding="md">
       <AppShell.Header>
-        <Flex direction="row" justify="end" align="center" h="100%">
-          <Group px="md">
-            <LoginButton />
-          </Group>
-        </Flex>
+        <Container h="100%">
+          <Flex direction="row" justify="end" align="center" h="100%">
+            <Group px="md">
+              <LoginButton />
+            </Group>
+          </Flex>
+        </Container>
       </AppShell.Header>
       <AppShell.Main>
         <Container>

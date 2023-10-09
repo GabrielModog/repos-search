@@ -1,6 +1,7 @@
 import "@mantine/core/styles.css";
 import Head from "next/head";
 import type { AppProps } from "next/app";
+import { SessionProvider } from "next-auth/react";
 
 import ThemeProvider from "@/components/theme-provider";
 
@@ -14,7 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider>
-        <Component {...pageProps} />
+        <SessionProvider>
+          <Component {...pageProps} />
+        </SessionProvider>
       </ThemeProvider>
     </>
   );
