@@ -1,14 +1,17 @@
-import { AppShell, Group, Container } from "@mantine/core";
+import { AppShell, Group, Flex, Container } from "@mantine/core";
 
 import SearchInput from "@/components/search-input";
+import LoginButton from "@/components/login-button";
 
 export default function Home() {
   return (
     <AppShell header={{ height: 60 }} padding="md">
       <AppShell.Header>
-        <Group h="100%" px="md">
-          Navbar
-        </Group>
+        <Flex direction="row" justify="end" align="center" h="100%">
+          <Group px="md">
+            <LoginButton />
+          </Group>
+        </Flex>
       </AppShell.Header>
       <AppShell.Main>
         <Container>
