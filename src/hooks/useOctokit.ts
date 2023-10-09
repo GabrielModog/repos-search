@@ -5,7 +5,7 @@ export default function useOcktokit() {
   const { data: session } = useSession();
 
   const octokit = new Octokit({
-    auth: session?.accessToken?.access_oken,
+    auth: session?.accessToken?.accessToken,
   });
 
   async function searchRepository(repoName: string) {
