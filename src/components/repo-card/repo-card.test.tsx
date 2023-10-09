@@ -14,7 +14,7 @@ describe("Repo Card Component", () => {
     render(
       <ThemeProvider>
         <RepoCard
-          id="1"
+          id={1}
           title="Test"
           description="lorem ispum test"
           onClick={onClickHandle}
