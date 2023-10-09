@@ -1,4 +1,4 @@
-import { Card, Badge, Title, Text, Group, Button } from "@mantine/core";
+import { Card, Flex, Badge, Title, Text, Group, Button } from "@mantine/core";
 
 export interface RepoCardProps {
   id: string;
@@ -23,31 +23,33 @@ export default function RepoCard({
       withBorder
       data-testid={`repocard_${id}`}
     >
-      <Group justify="space-between" mb="xs">
-        <Title fw={500} order={3}>
-          {title}
-        </Title>
-        {badge && (
-          <Badge color="pink" variant="light">
-            {badge}
-          </Badge>
-        )}
-      </Group>
+      <Flex direction="column" justify="space-between" align="center" h="100%">
+        <Group justify="space-between" mb="xs">
+          <Title fw={500} order={4} style={{ textAlign: "center" }}>
+            {title}
+          </Title>
+          {badge && (
+            <Badge color="pink" variant="light">
+              {badge}
+            </Badge>
+          )}
+        </Group>
 
-      <Text size="sm" c="dimmed">
-        {description}
-      </Text>
+        <Text size="sm" c="dimmed" style={{ textAlign: "justify" }}>
+          {description}
+        </Text>
 
-      <Button
-        variant="light"
-        color="blue"
-        fullWidth
-        mt="md"
-        radius="md"
-        onClick={onClick}
-      >
-        Details
-      </Button>
+        <Button
+          variant="light"
+          color="blue"
+          fullWidth
+          mt="md"
+          radius="md"
+          onClick={onClick}
+        >
+          Details
+        </Button>
+      </Flex>
     </Card>
   );
 }
