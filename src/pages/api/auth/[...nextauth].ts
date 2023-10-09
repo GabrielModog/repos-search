@@ -18,6 +18,7 @@ export const authOptions: NextAuthOptions = {
       return token;
     },
     async session({ session, token, user }): Promise<Session> {
+      session.accessToken = token;
       return session;
     },
   },

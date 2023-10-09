@@ -1,5 +1,5 @@
 import { useReposStore } from "@/store/repos";
-import { Loader, Flex, SimpleGrid } from "@mantine/core";
+import { Loader, Flex, Title, SimpleGrid } from "@mantine/core";
 import { modals } from "@mantine/modals";
 
 import RepoDetails from "@/components/repo-details";
@@ -20,6 +20,14 @@ export default function ListRepos() {
     return (
       <Flex align="center" justify="center" h="50vh">
         <Loader size={42} />
+      </Flex>
+    );
+  }
+
+  if (status === "ERROR") {
+    return (
+      <Flex align="center" justify="center" h="50vh">
+        <Title order={3}>Something went wrong!</Title>
       </Flex>
     );
   }

@@ -1,8 +1,11 @@
 import { Octokit } from "octokit";
+import { useSession } from "next-auth/react";
 
 export default function useOcktokit() {
+  const { data: session } = useSession();
+
   const octokit = new Octokit({
-    auth: process.env.GITHUB_PERSONAL_TOKEN,
+    auth: session?.accessToken?.access_oken,
   });
 
   async function searchRepository(repoName: string) {
