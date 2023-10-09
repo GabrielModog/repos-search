@@ -25,7 +25,12 @@ export default function RepoCard({
     >
       <Flex direction="column" justify="space-between" align="center" h="100%">
         <Group justify="space-between" mb="xs">
-          <Title fw={500} order={4} style={{ textAlign: "center" }}>
+          <Title
+            fw={500}
+            order={4}
+            style={{ textAlign: "center" }}
+            data-testid="repocard-title"
+          >
             {title}
           </Title>
           {badge && (

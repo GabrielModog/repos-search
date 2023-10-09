@@ -24,4 +24,20 @@ describe("Repo Card Component", () => {
     const element = screen.getByTestId("repocard_1");
     expect(element).toBeInTheDocument();
   });
+
+  test("Should render card", () => {
+    const onClickHandle = jest.fn();
+    render(
+      <ThemeProvider>
+        <RepoCard
+          id={1}
+          title="Test"
+          description="lorem ispum test"
+          onClick={onClickHandle}
+        />
+      </ThemeProvider>
+    );
+    const element = screen.getByTestId("repocard-title");
+    expect(element).toBeInTheDocument();
+  });
 });
