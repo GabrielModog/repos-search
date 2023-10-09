@@ -11,7 +11,10 @@ export default function LoginButton() {
         <Flex direction="row" justify="space-between" align="center" mr={14}>
           {session?.user?.image && (
             <Paper mr="sm" radius="100%" style={{ overflow: "hidden" }} w={36}>
-              <Image src={session?.user?.image} />
+              <Image
+                src={session?.user?.image}
+                alt={session?.user?.name ?? ""}
+              />
             </Paper>
           )}
           <Text c="blue" span>

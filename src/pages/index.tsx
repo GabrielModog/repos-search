@@ -38,6 +38,7 @@ export default function Home() {
               {repos &&
                 repos.map((item) => (
                   <RepoCard
+                    key={item.id}
                     id={item.id}
                     title={item.full_name}
                     description={item.description}
