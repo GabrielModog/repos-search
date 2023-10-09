@@ -6,3 +6,8 @@ export interface RepoDetailsObject {
   language: string;
   visibility: string;
 }
+
+export interface RepoObject extends RepoDetailsObject {
+  full_name: string;
+  description: string;
+}
