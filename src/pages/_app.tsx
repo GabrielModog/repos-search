@@ -1,9 +1,8 @@
-import Head from "next/head";
-import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
+import Head from "next/head";
 import type { AppProps } from "next/app";
 
-import { mantineDefaultProps } from "@/styles/default-props";
+import ThemeProvider from "@/components/theme-provider";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,9 +13,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MantineProvider theme={{ ...mantineDefaultProps }}>
+      <ThemeProvider>
         <Component {...pageProps} />
-      </MantineProvider>
+      </ThemeProvider>
     </>
   );
 }

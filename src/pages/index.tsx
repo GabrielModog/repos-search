@@ -1,4 +1,6 @@
-import { AppShell, Group } from "@mantine/core";
+import { AppShell, Group, Container } from "@mantine/core";
+
+import SearchInput from "@/components/search-input";
 
 export default function Home() {
   return (
@@ -8,7 +10,11 @@ export default function Home() {
           Navbar
         </Group>
       </AppShell.Header>
-      <AppShell.Main>Content</AppShell.Main>
+      <AppShell.Main>
+        <Container>
+          <SearchInput />
+        </Container>
+      </AppShell.Main>
     </AppShell>
   );
 }
