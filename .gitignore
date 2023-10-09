@@ -5,6 +5,12 @@
 /.pnp
 .pnp.js
 
+# envs
+.env
+.env.production
+.env.stagging
+.env.homolog
+
 # testing
 /coverage
 
