@@ -1,10 +1,10 @@
 import { Card, Flex, Badge, Title, Text, Group, Button } from "@mantine/core";
 
 export interface RepoCardProps {
-  id: string;
+  id: number;
   title: string;
   description: string;
-  onClick: () => void;
+  onClick: (id?: number) => void;
   badge?: string;
 }
 
@@ -45,7 +45,7 @@ export default function RepoCard({
           fullWidth
           mt="md"
           radius="md"
-          onClick={onClick}
+          onClick={() => onClick(id)}
         >
           Details
         </Button>
