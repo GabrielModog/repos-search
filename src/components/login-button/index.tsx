@@ -1,4 +1,4 @@
-import { Button, Text, Group } from "@mantine/core";
+import { Button, Text, Group, Flex, Paper, Image } from "@mantine/core";
 import { IconBrandGithub, IconLogout } from "@tabler/icons-react";
 import { useSession, signIn, signOut } from "next-auth/react";
 
@@ -8,13 +8,17 @@ export default function LoginButton() {
   if (session) {
     return (
       <Group>
-        <Text>
-          Welcome,{" "}
+        <Flex direction="row" justify="space-between" align="center" mr={14}>
+          {session?.user?.image && (
+            <Paper mr="sm" radius="100%" style={{ overflow: "hidden" }} w={36}>
+              <Image src={session?.user?.image} />
+            </Paper>
+          )}
           <Text c="blue" span>
             {session?.user?.name}
           </Text>{" "}
-          <br />
-        </Text>
+        </Flex>
+
         <Button size="sm" onClick={() => signOut()}>
           <IconLogout size={18} />
           <Text ml={4} size="sm">

@@ -1,6 +1,6 @@
 import { AppShell, Group, Flex, Container } from "@mantine/core";
 
-import SearchInput from "@/components/search-input";
+import SearchForm from "@/components/search-form";
 import LoginButton from "@/components/login-button";
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       </AppShell.Header>
       <AppShell.Main>
         <Container>
-          <SearchInput />
+          <SearchForm />
         </Container>
       </AppShell.Main>
     </AppShell>
