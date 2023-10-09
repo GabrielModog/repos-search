@@ -1,12 +1,5 @@
 import { useReposStore } from "@/store/repos";
-import {
-  AppShell,
-  Loader,
-  Group,
-  Flex,
-  Container,
-  SimpleGrid,
-} from "@mantine/core";
+import { Loader, Flex, SimpleGrid } from "@mantine/core";
 import { modals } from "@mantine/modals";
 
 import RepoDetails from "@/components/repo-details";
